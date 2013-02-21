@@ -1,5 +1,3 @@
-require './song_class.rb'
-
 class Artist
   attr_accessor :name, :songs, :genres
   @@artist = []

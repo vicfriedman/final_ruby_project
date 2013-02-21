@@ -1,6 +1,7 @@
-require './lib/artist_class.rb'
-require './lib/song_class.rb'
-require './lib/genre_class.rb'
+require_relative 'lib/artist_class'
+require_relative 'lib/song_class'
+require_relative 'lib/genre_class'
+require 'pry'
 
 def test(title, &b)
   begin
