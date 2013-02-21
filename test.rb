@@ -1,6 +1,6 @@
-require './artist_class.rb'
-require './song_class.rb'
-require './genre_class.rb'
+require './lib/artist_class.rb'
+require './lib/song_class.rb'
+require './lib/genre_class.rb'
 
 def test(title, &b)
   begin
@@ -129,8 +129,8 @@ test 'A genre has many songs' do
     song.genre = genre
   end
 
-#   assert_equal genre.songs.count, 2
-# end
+  assert_equal genre.songs.count, 2
+end
 
 # test 'A genre has many artists' do
 #   genre = Genre.new.tap{|g| g.name = 'rap'}

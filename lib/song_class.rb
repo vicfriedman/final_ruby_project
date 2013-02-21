@@ -1,4 +1,4 @@
-require './lib/artist_class.rb'
+require './artist_class.rb'
 
 class Song
   attr_accessor :genre
