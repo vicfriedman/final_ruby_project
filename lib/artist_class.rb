@@ -27,9 +27,8 @@ class Artist
     @songs << song
     @genres = []
     @genres << song.genre
+    song.genre.artists << self if song.genre   
   end
-
-
 
 
 end
