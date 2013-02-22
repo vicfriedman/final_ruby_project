@@ -145,28 +145,28 @@ test 'A genre has many artists' do
   assert_equal genre.artists.count, 2
 end
 
-# test 'A genres Artists are unique' do
-#   genre = Genre.new.tap{|g| g.name = 'rap'}
-#   artist = Artist.new
+test 'A genres Artists are unique' do
+  genre = Genre.new.tap{|g| g.name = 'rap'}
+  artist = Artist.new
 
-#   [1,2].each do
-#     song = Song.new
-#     song.genre = genre
-#     artist.add_song(song)
-#   end
+  [1,2].each do
+    song = Song.new
+    song.genre = genre
+    artist.add_song(song)
+  end
 
-#   assert_equal genre.artists.count, 1
-# end
+  assert_equal genre.artists.count, 1
+end
 
-# Same behavior as Artists
-# test 'The Genre class can keep track of all created genres' do
-#   Genre.reset_genres # You must implement a method like this
-#   genres = [1..5].collect do |i|
-#     Genre.new
-#   end
+Same behavior as Artists
+test 'The Genre class can keep track of all created genres' do
+  Genre.reset_genres # You must implement a method like this
+  genres = [1..5].collect do |i|
+    Genre.new
+  end
 
-#   assert_equal Genre.all, genres
-# end
+  assert_equal Genre.all, genres
+end
 
 # Extra Credit
 # Complete any song test that is pending (undefined).
