@@ -158,7 +158,7 @@ test 'A genres Artists are unique' do
   assert_equal genre.artists.count, 1
 end
 
-Same behavior as Artists
+# Same behavior as Artists
 test 'The Genre class can keep track of all created genres' do
   Genre.reset_genres # You must implement a method like this
   genres = [1..5].collect do |i|

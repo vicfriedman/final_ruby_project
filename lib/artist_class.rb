@@ -4,6 +4,8 @@ class Artist
 
   def initialize
     @@artist << self
+    @songs = []
+    @genres = []
   end
 
   def self.count
@@ -23,9 +25,7 @@ class Artist
   end
 
   def add_song(song)
-    @songs = []
     @songs << song
-    @genres = []
     @genres << song.genre
     song.genre.artists << self if song.genre && !(song.genre.artists.include?(self))  
   end
